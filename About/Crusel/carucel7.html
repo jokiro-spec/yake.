@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yale School of Art</title>
+  <link rel="stylesheet" href="carucel7.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/c/c7/Yale_School_of_Art.png" type="image/png">
+  <!-- Iconos de Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <img src="images.png" alt="Logo" class="logo">
+      <span class="title">Yale School of Art</span>
+    </div>
+    <div class="header-right">
+      <a href="/indexhome.html" class="icon">
+        <i class="fas fa-home"></i></a>
+      <button id="menu-toggle" class="icon">
+        <i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <nav id="side-menu" class="side-menu">
+    <button class="close-btn" id="close-menu">&times;</button>
+    <a href="/news/news.html">News</a>
+    <a href="/xd/eventos.html">Events</a>
+    <a href="/Tfsdfsd/publicaciones.html">Publication</a>
+    <a href="https://yalemfathesis.viewingrooms.com/exhibitions/">Exhibition </a>
+    <a href="https://admissions.yale.edu/contact-us">Admision</a>
+    <a href="/About/indexabout.html">About School</a>
+  </nav>
+    <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('close-menu');
+    const sideMenu = document.getElementById('side-menu');
+
+    toggleBtn.onclick = () => sideMenu.classList.add('open');
+    closeBtn.onclick = () => sideMenu.classList.remove('open');
+  </script>
+<div class="container">
+  <!-- COLUMNA IZQUIERDA -->
+  <div class="left">
+    <img src="carucel7.1.png" alt="Virtual Visits" class="link-image" id="virtualVisitsImg">
+  </div>
+
+  <!-- COLUMNA DERECHA -->
+  <div class="right">
+    <!-- Enlace YouTube -->
+    <a href="https://www.youtube.com/playlist?list=PLsItDf44yBTGMwlXccUqx-J_s7ZxeORMm" target="_blank">
+      <img src="carucel7.4.jpg" alt="YouTube Icon" class="youtube-icon" id="youtubeIcon">
+    </a>
+
+    <!-- OPEN STUDIOS -->
+    <div>
+      <div class="section-title"><span class="highlight">OPEN STUDIOS</span></div>
+      <a id="openStudiosLink" href="#">
+        <img src="carucel7.2.jpg" alt="Open Studios Image" class="link-image" id="openStudiosImage">
+      </a>
+    </div>
+
+    <!-- TOURS -->
+    <div>
+      <h2 class="section-title">TOURS</h2>
+      <a id="toursLink" href="#">
+        <img src="carucel7.3.jpg" alt="Tours Campus Image" class="link-image" id="toursImage">
+      </a>
+    </div>
+  </div>
+</div>
+<script>
+    document.getElementById('openStudiosLink').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.open('https://yaleschoolofart.viewingrooms.com/openstudios/', '_blank');
+});
+
+document.getElementById('toursLink').addEventListener('click', function (e) {
+  e.preventDefault();
+  window.open('https://admissions.yale.edu/tours', '_blank');
+});
+</script>
+</body>
+</html>

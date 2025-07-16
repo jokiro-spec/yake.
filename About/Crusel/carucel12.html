@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yale School of Art</title>
+  <link rel="stylesheet" href="carucel12.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/c/c7/Yale_School_of_Art.png" type="image/png">
+  <!-- Iconos de Font Awesome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="header-left">
+      <img src="images.png" alt="Logo" class="logo">
+      <span class="title">Yale School of Art</span>
+    </div>
+    <div class="header-right">
+      <a href="/indexhome.html" class="icon">
+        <i class="fas fa-home"></i></a>
+      <button id="menu-toggle" class="icon">
+        <i class="fas fa-bars"></i></button>
+    </div>
+  </header>
+
+  <nav id="side-menu" class="side-menu">
+    <button class="close-btn" id="close-menu">&times;</button>
+    <a href="/news/news.html">News</a>
+    <a href="/xd/eventos.html">Events</a>
+    <a href="/Tfsdfsd/publicaciones.html">Publication</a>
+    <a href="https://yalemfathesis.viewingrooms.com/exhibitions/">Exhibition </a>
+    <a href="https://admissions.yale.edu/contact-us">Admision</a>
+    <a href="/About/indexabout.html">About School</a>
+  </nav>
+    <script>
+    const toggleBtn = document.getElementById('menu-toggle');
+    const closeBtn = document.getElementById('close-menu');
+    const sideMenu = document.getElementById('side-menu');
+
+    toggleBtn.onclick = () => sideMenu.classList.add('open');
+    closeBtn.onclick = () => sideMenu.classList.remove('open');
+  </script>
+  <!--contenido principal-->
+<div class="about-title-container">
+  <h1 class="about-title">About this Site</h1>
+</div>
+<div class="about-text">
+  <p>
+This website is the continuously evolving effort of many people from many disciplines within the Yale School of Art 
+and its wider circles. It is a <a href="https://en.wikipedia.org/wiki/Yale_School_of_Art" target="_blank">wiki</a>, meaning
+ that every graduate student, staff person, and faculty member of the School can change this website’s content or add to it
+  at any time. (Logins for other friends, alums, and members of the school are coming soon.)
+  </p>
+  <p>
+When you click “Edit this page” on any page, you’ll be prompted to log in using your Yale ID. Then you can proceed to make
+ changes or additions to that page, which everyone else will see.
+  </p>
+  <p>
+For practical reasons, not everyone in or associated with the School has access to edit every part of every page. For 
+example, while students may offer their views on a course’s page, or add information or resources, they cannot create
+official course descriptions. (At the moment, locked areas and content types are the exception rather than the rule.)
+  </p>
+  <p>
+That said, we, as a collaborative community, are confident that the information on this website is as reliable as that on
+any website and more open to diverse voices and perspectives than most. In order that it remains so the site’s interactivity
+is to be used freely but wisely. As you move through it you may, in consequence of such openness, encounter content that
+surprises you or with which you don’t agree. That will be the sign that this website reflects life in our institution in
+all its heterogeneous dimensions.
+  </p>
+</div>
+
+</body>
+</html>

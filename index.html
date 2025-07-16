@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home.Yale.School</title>
+  <link rel="stylesheet" href="stylehome.css">
+  <!-- Ícono -->
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/en/c/c7/Yale_School_of_Art.png" type="image/png">
+  
+</head>
+<body>
+  <header>
+    <!-- Navigation Bar -->
+     <div class="top-bar">
+      <div class="language-selector">ES | EN</div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c7/Yale_School_of_Art.png" alt="Art Icon" class="logo-icon">
+      <span class="school-name">Yale School of Art</span>
+     <!-- Enlaces del lado derecho -->
+      <div class="top-links">
+      <a href="https://secure.its.yale.edu/cas/login?service=https%3A%2F%2Fdirectory.yale.edu%2F">Students</a>
+      <a href="https://yaleschoolofartredesign.weebly.com/faculty-and-staff.html">Faculty & Staff</a>
+          <!-- Bloque desplegable Quick Links -->
+    <div class="dropdown">
+      <a href="#" onclick="toggleMenu()">Quick Links</a>
+      <div id="quickMenu" class="dropdown-content">
+        <a href="/news/news.html">Newaletters</a>
+        <a href="https://soapublicevents.eventcalendarapp.com/">Calendar</a>
+        <a href="https://yale.us14.list-manage.com/subscribe?u=c7ccb8ef693ab66aa235e6c03&id=570166342a">Sig Up For School Newaletters</a>
+        <a href="https://yaleschoolofart.eventcalendarapp.com/">Comunity Calendar</a>
+        <a href="https://courses.yale.edu/">Courses</a>
+        <a href="https://www.artconnect.com/yale-school-of-art-IVuneUp2-3Y3OzIKoAsC_">Opportunities</a>
+        <a href="https://www.artconnect.com/yale-school-of-art-IVuneUp2-3Y3OzIKoAsC_">School Of Art in the World</a>
+        <a href="https://yale.service-now.com/it?id=get_help">Knowladgebases</a>
+        <a href="https://ocs.yale.edu/channels/staff/">faculty& Staff</a>
+      </div>
+    </div>
+
+      <a href="LogIn/p7/practica.html">Visitors:Login</a>
+      </div>
+     </div>
+<script>
+  function toggleMenu() {
+    const menu = document.getElementById("quickMenu");
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  }
+
+  document.addEventListener("click", function (event) {
+    const menu = document.getElementById("quickMenu");
+    const trigger = document.querySelector('.dropdown > a');
+    if (!menu.contains(event.target) && !trigger.contains(event.target)) {
+      menu.style.display = "none";
+    }
+  });
+</script>
+     <!--banda amarillo-->
+      <nav class="main-nav">
+      <div class="nav-container">
+        <ul class="nav-links">
+          <li><a href="http://127.0.0.1:5500/HTML/indexhome.html#">Home</a></li>
+          <li><a href="/news/news.html">News</a></li>
+          <li><a href="xd/eventos.html">Events</a></li>
+          <li><a href="/Tfsdfsd/publicaciones.html">Publication</a></li> 
+          <li><a href="https://yalemfathesis.viewingrooms.com/exhibitions/">Exhibition</a></li>
+          <li><a href="https://admissions.yale.edu/contact-us">Admision</a></li>
+          <li><a href="/About/indexabout.html">About School</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="image-slider">
+    <img src="Imagenes/Yale1.jpg" class="slider-image active">
+    <img src="Imagenes/Yale2.jpg" class="slider-image">
+    <img src="Imagenes/Yale3.jpg" class="slider-image">
+    <img src="Imagenes/Yale3.jpg" class="slider-image">
+    <img src="Imagenes/Yale4.jpg" class="slider-image">
+    <img src="Imagenes/Yale5.jpg" class="slider-image">
+    <img src="Imagenes/Yale6.jpg" class="slider-image">
+    </div>
+
+    <section class="who-we-are">
+  <h2>WHO WE ARE</h2>
+  <p>
+    The School of Art is one of Yale’s Graduate & Professional Schools, conferring MFA degrees in Graphic Design, Painting/Printmaking, Photography, and Sculpture;
+    <br><br>
+    and offers undergraduate-level art courses to Yale College students. Our website exists as an ongoing collaborative experiment in digital publishing and information sharing.
+    It functions as a wiki—all School of Art community members can add new and edit most existing content.
+  </p>
+</section>
+<!-- Aquí va tu nueva sección -->
+  <section class="happening-soa">
+      <h2>Happening At SOA</h2>
+      <div class="card-container">
+        <!-- Caja 1 -->
+        <a href="/Lecture/vals.html" target="_blank" class="card">
+          <img src="Imagenes/SOA1.jpg" alt="Spring 2025 Lecture">
+          <p>
+            Visiting Artist Lectures<br>
+            Spring 2025
+          </p>
+        </a>
+
+        <!-- Caja 2 -->
+        <a href="/Lecture2024/2024lect.html" target="_blank" class="card">
+          <img src="Imagenes/SOA2.gif" alt="Fall 2024 Lecture">
+          <p>
+            Visiting Artist Lectures<br>
+            Fall 2024
+          </p>
+        </a>
+
+        <!-- Caja 3 -->
+        <a href="https://yalemfathesis.viewingrooms.com/exhibitions/" target="_blank" class="card">
+          <img src="Imagenes/SOA3.jpeg" alt="Spring 2025 Exhibition">
+          <p>
+            Spring 2025 Exhibition
+          </p>
+        </a>
+      </div>
+    </section>
+  </header>
+   <!-- Luego sigue tu script de slider -->
+   <script>
+  let currentIndex = 0;
+  const images = document.querySelectorAll('.slider-image');
+
+  function showNextImage() {
+    images[currentIndex].classList.remove('active');
+    currentIndex = (currentIndex + 1) % images.length;
+    images[currentIndex].classList.add('active');
+  }
+
+  setInterval(showNextImage, 3000); // cambia cada 3 segundos
+   </script>
+   <!--comunuty and bulleting-->
+   <section class="community-board">
+  <h2>Community Bulletin Board</h2>
+
+  <!-- Caja 1: Imagen izquierda + texto derecha -->
+  <div class="horizontal-card">
+    <img src="Imagenes/Comunity1.jpg" alt="Environmental Justice">
+    <div class="horizontal-text">
+      <h3>From our friends at the Yale Center for Environmental Justice</h3>
+      <p>
+        The Yale Center for Environmental Justice is in the process of planning our fourth 
+        annual Global Environmental Justice Conference, with this year focusing on the theme 
+        of “Environmental Joy.” The conference aims to explore environmental and climate 
+        justice and the communities engaged in that work generate joy. Guided by the notion 
+        that the ultimate goal of most environmental and climate work is to alleviate suffering
+         and increase well-being, Environmental Joy will explore and celebrate the diverse ways 
+         that environmental justice achieves this goal.
+        <br><br>
+        One facet of the conference programming we hope to organize is a juried art show soliciting
+         works from artists around the world on the theme of Environmental Joy to be showcased in an exhibition
+          during the conference. We are currently seeking any interested students or faculty who 
+          would be interested in supporting the planning and execution of this call for art. If you’re 
+          interested in learning more about the opportunity, please contact Julia Simon at julia.simon@yale.edu.</span>
+      </p>
+    </div>
+  </div>
+<!-- Caja 2 -->
+<div class="horizontal-card">
+  <img src="Imagenes/Comunity2.webp" alt="Arts Apprenticeship">
+  <div class="horizontal-text">
+    <h3>Faculty/Alumni: Post Your Art Apprenticeship/Internship Opportunities</h3>
+    <p>
+      The Yale Arts Apprenticeship Program is an initiative that connects Yale undergraduates,
+      particularly those on financial aid, with professional arts practitioners of any discipline. 
+      As an option within Yale’s Summer Experience Award (SEA) funding model, the Arts Apprenticeship
+      must fulfill the same basic requirements. Additional details, as well as those specific to the
+      Arts Apprenticeship are included below. Yale faculty, alumni, or other arts practitioners interested
+      in featuring positions through the program should contact Yale’s Creative Careers advisor. 
+      Which Opportunities are Eligible? Must be at least 30 hours/week, for at least 8-weeks over the
+      summer months. Those 8-weeks do not have to be continuous if the mentoring Arts Practitioner agrees
+      on a different schedule. The time commitment need not all be in direct contact with 
+      the Arts Practitioner. Independent projects, tasks, research, etc. can comprise much of the experience,
+      as long as the Arts Practitioner is checking in regularly with the student to provide oversight 
+      and career-based context. The opportunity cannot be with a for-profit organization. The engagement 
+      for an Arts Apprenticeship should be directly with an individual Arts Practitioner and not with 
+      a company. The only exception to this would be if the company overseeing the apprenticeship were 
+      a registered non-profit organization. For more information: <br>
+
+      👉 <a href="https://ocs.yale.edu/channels/arts-apprenticeship/" target="_blank">More Info</a><br>
+      📩 <a href="https://ocs.yale.edu/staff-list/#derek-i-webster" target="_blank">Post a Job</a>
+    </span>
+    </p>
+  </div>
+</div>
+
+<!-- Caja 3 -->
+<div class="horizontal-card">
+  <img src="Imagenes/Comunity3.jpg" alt="Mapping Public Art">
+  <div class="horizontal-text">
+    <h3>Mapping Public Art in New Haven</h3>
+    <p>
+      Hey everyone! I’ve been mapping public art in New Haven as part of my nonprofit project ArtAround 
+      and I’d love to invite you to join me,
+    or just check it out and see what you think.
+    <br>
+      🗺️ <a href="https://map.artaround.org/?city=New%20Haven" target="_blank">New Haven map</a> <br>
+      🌐 <a href="https://artaround.org/" target="_blank">ArtAround homepage</a></span>
+    </p>
+  </div>
+  
+</div>
+</section>
+</section>
+
+<section class="calendar-section">
+  <h2>Calendars</h2>
+
+  <div class="calendar-card">
+    <img src="Imagenes/Calendar.jpg" alt="Calendars">
+    <div class="calendar-text">
+      <h3>NEW CALENDARS BEGINNING SUMMER 2020</h3>
+      <p>
+        📅 <strong><a href="https://soapublicevents.eventcalendarapp.com/">Public Calendar</a></strong><br>
+        Containing those events open to the public.
+      </p>
+      <p>
+        🌍 <strong><a href="https://www.artconnect.com/yale-school-of-art-IVuneUp2-3Y3OzIKoAsC_">School of Art in the World</a></strong><br>
+        Containing events and exhibitions hosted by, led by, or featuring members of the School of Art community.
+      </p>
+      <p>
+        🧑‍🎓 <strong><a href="https://calendar.yale.edu/cal/main/showEventList.rdo;jsessionid=XAqMsFfl4x6AAe_tNvkO_8Vv53Jj0fHRRCndqoXw.ip-10-0-10-211">Community Calendar</a></strong><br>
+        Containing those events open only to the SoA community.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="graduation-section">
+  <h2>Graduation</h2>
+
+  <div class="graduation-card">
+    <div class="graduation-text">
+      <h3>Congratulations to the MFA Class of 2025! 🎓🥂</h3>
+      <p>
+        On Monday, May 19, the Yale School of Art celebrates its graduating class of 2025 with a commencement address by theorist and artist Eva Hayward.
+      </p>
+      <p>
+        👉 <a href="https://www.art.yale.edu/classof2025" target="_blank">View more about the Class of 2025</a>
+      </p>
+    </div>
+    <img src="Imagenes/Graduation.jpg" alt="Graduation 2025">
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-left">
+    <img src="Imagenes/Logo Footer.png" alt="Yale Logo">
+    
+    <div class="footer-links">
+      <a href="/prueba xd/supportheschoold.html">Support the School</a>
+      <a href="/About/Crusel/carucel7.html">Visiting</a>
+      <a href="/About/indexabout.html">Sitemap</a>
+      <a href="/prueba xd/accesibily.html">Accessibility at Yale</a>
+    </div>
+
+    <div class="footer-copy">
+      © 2025 Yale School of Art<br>
+      1156 Chapel Street, POB 208339<br>
+      New Haven, Connecticut, 06520-8339
+    </div>
+  </div>
+
+  <div class="footer-right">
+    <a href="https://www.instagram.com/yaleschoolofart/">Instagram</a>
+    <a href="https://www.facebook.com/YaleSchoolofArt/">Facebook</a>
+    <a href="https://www.youtube.com/channel/UCDwJT0mYodTSodcpH-hGmdA">YouTube</a>
+    <a href="https://www.art.yale.edu/about/contact">Contact</a>
+  </div>
+</footer>
+
+<div id="overlay-bienvenida">
+  <div class="bienvenida">
+    ¡Bienvenido, usuario anónimo!
+  </div>
+</div>
+<script>
+  document.querySelectorAll('.read-more').forEach(link => {
+    link.addEventListener('click', function(e) {
+      e.preventDefault();
+      const moreContent = this.previousElementSibling.querySelector('.more-content');
+      if (moreContent.style.display === 'none') {
+        moreContent.style.display = 'inline';
+        this.textContent = 'Read Less';
+      } else {
+        moreContent.style.display = 'none';
+        this.textContent = 'Read More';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>

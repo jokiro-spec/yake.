@@ -1,0 +1,107 @@
+ /* ==== Reset básico ==== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==== Variables CSS ==== */
+:root {
+  --color-bg: #f9f9f9;
+  --color-text: #1a1a1a;
+  --color-primary: #00356b;
+  --color-accent: #0055aa;
+  --color-white: #ffffff;
+  --color-gray: #555;
+  --font-main: 'Segoe UI', sans-serif;
+}
+
+/* ==== Base global ==== */
+body {
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 18px;
+  line-height: 1.7;
+  padding: 0;
+  margin: 0;
+}
+
+/* ==== Contenedor central ==== */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* ==== Header ==== */
+header {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 2rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+header p {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* ==== Títulos ==== */
+h2 {
+  color: var(--color-accent);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--color-text);
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+}
+
+/* ==== Secciones ==== */
+section {
+  background-color: var(--color-white);
+  padding: 1.5rem;
+  margin-top: 2rem;
+  border-left: 4px solid var(--color-accent);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ==== Listas ==== */
+ul {
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* ==== Enlaces ==== */
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+  outline: none;
+}
+
+/* ==== Footer ==== */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+  padding: 2rem;
+  margin-top: 3rem;
+  border-top: 1px solid #ddd;
+}

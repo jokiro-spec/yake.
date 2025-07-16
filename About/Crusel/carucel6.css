@@ -1,0 +1,176 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('fondo.jpg'); /* Cambia esto por el nombre de tu imagen */
+  background-size: cover;       /* Que cubra todo el fondo */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  background-attachment: fixed; /* Fondo fijo al hacer scroll */
+  height: 100vh;                /* O toda la página si quieres */
+  color: white;
+}
+@keyframes sweep {
+   0% {
+  background-position: left center;
+  }
+   100% {
+  background-position: right center;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, red, yellow, blue);
+  color: white;
+  position: static;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right .icon {
+  color: rgb(232, 9, 206);
+  font-size: 1.5rem;
+  margin-left: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Side menu styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #85035e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid #444;
+  transition: background 0.2s;
+}
+
+.side-menu a:hover {
+  background-color: #555;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d6f0f0;
+}
+
+.container {
+  display: flex;
+  max-height: 100vh;
+}
+
+.sidebar {
+  width: 250px;
+  background: #de176d;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.sidebar button {
+  margin: 5px 0;
+  padding: 10px;
+  background: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.sidebar button:hover {
+  background: #ddd;
+}
+
+.content-box {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  position: relative;
+   background: linear-gradient(to bottom right, #f7f746, #b142bb, #f966b5, #ffb3b3, #4bb552);
+}
+
+.content-section {
+  display: none;
+  padding: 20px;
+  max-height: calc(100vh - 40px);
+  overflow-y: hidden;
+  transition: all 0.3s ease;
+}
+
+.content-section:hover {
+  overflow-y: auto;
+}
+
+.content-section a {
+  color: #08032a;
+  text-decoration: none;
+}
+
+.content-section img {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+  margin-bottom: 10px;
+}
+

@@ -1,0 +1,555 @@
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.6em;
+  font-weight: bold;
+  color: black;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 28px;
+ height: 28px;
+} 
+.top-bar {
+  background-color: #ee2626;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 2;
+  font-size: 0.9em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1001;
+  margin-bottom: 0px;
+  margin: 0px;
+}
+
+/* Lado izquierdo (idioma + logo + texto) */
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* espacio entre ES|EN y logo/texto */
+}
+
+/* Logo y texto muy pegados */
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* casi pegados, puedes reducir a 0 si quieres más */
+}
+
+.logo-icon {
+  height: 35px;
+}
+
+.school-name {
+  font-weight: bold;
+  font-size: 1em;
+  color: black;
+}
+
+.top-links {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* separación entre enlaces */
+  padding-right: 20px; /* espacio con el borde derecho */
+  margin: 20px;
+  margin: bottom 0;;
+}
+
+.top-links a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.top-links a:hover {
+  text-decoration: underline;
+}
+
+/* Banda amarilla fija debajo de la roja */
+.main-nav {
+  background-color: yellow;
+  padding: 20PX 15px;
+  position: fixed;
+  top: 48px; /* Asegúrate que coincide con la altura real de la barra roja */
+  width: 100%;
+  z-index: 1000;
+  margin-top: 0;
+  margin: 0;
+  margin-left: 0px;
+  margin-bottom: 0px;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 50px; /* espacio entre los elementos */
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Lista de enlaces */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px; /* espacio entre los botones */
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo de cada enlace */
+.nav-links li a {
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+  font-weight: 500;
+  transition: 0.3s;
+  font-size: 1.1em; /* tamaño de fuente */
+  padding: 20px; /* espacio alrededor del texto */
+  margin-top: 20px; /* espacio superior */
+}
+
+/* Animación al pasar el mouse */
+.nav-links li a:hover {
+  color: #2945ce; /* color azul al pasar el mouse */
+}
+
+/* Estructura para dropdown dentro de top-links */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+  z-index: 999;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Estilo de enlaces con efecto botón */
+.dropdown-content a {
+  background-color: #e0e0e0;
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  margin: 4px 0;
+  display: block;
+  border-radius: 4px;
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+/* Efecto de zoom al pasar el mouse */
+.dropdown-content a:hover {
+  background-color: #ccc;
+  transform: scale(1.05);
+}
+
+
+/* Espaciado y márgenes */
+body {
+  padding-top: 100px;
+  margin: 0;
+}
+
+/* Sección de eventos */
+.eventos {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+}
+
+.eventos h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.evento {
+  background-color: #f1f1f1;
+  margin-bottom: 15px;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+}
+
+.evento h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.evento p {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+/* Calendario */
+.calendar {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.calendar iframe {
+  border: none;
+  width: 100%;
+  max-width: 800px;
+  height: 600px;
+}
+
+/* Galería contenedora */
+.galeria-contenedor {
+  position: relative;
+  width: 90%;
+  margin: 40px auto;
+  overflow: hidden;
+  perspective: 1200px;
+}
+
+.galeria {
+  display: flex;
+  transition: transform 0.5s ease;
+  gap: 10px;
+  padding: 20px 0;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.caja {
+  flex: 0 0 20%;
+  transition: transform 0.3s ease;
+  perspective: 800px;
+  position: relative;
+}
+
+.caja img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja:hover img {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 20, 0.2);
+}
+
+.caja h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+}
+
+.caja h3 a {
+  color: #222;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.caja h3 a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+/* Flechas sobrepuestas */
+.flecha {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.flecha.izquierda {
+  left: 0;
+}
+
+.flecha.derecha {
+  right: 0;
+}
+
+/* Apartado Yale School of Art */
+.apartado-yale {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+.apartado-yale p {
+  margin: 0;
+  text-align: center;
+}
+
+/* Cajas verticales */
+.contenedor-cajas {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 20px;
+}
+
+.caja-vertical {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  border: 4px solid brown;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.caja-vertical:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Fondo degradado para caja 1 */
+.caja-vertical:nth-child(1) {
+  background: linear-gradient(135deg, #a3d8f4, #cba6f7, #f5b1e3);
+}
+
+/* Fondo degradado para caja 2 */
+.caja-vertical:nth-child(2) {
+  background: linear-gradient(135deg, #f7a1a1, #fcd5ce, #fbb1bd);
+}
+
+.caja-vertical.inversa {
+  flex-direction: row-reverse;
+}
+
+.caja-vertical img {
+  width: 250px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: opacity 0.4s ease;
+}
+
+.caja-vertical .texto {
+  flex: 1;
+}
+
+.caja-vertical h3 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.caja-vertical p {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: #001f4d;
+  color: white;
+  padding: 30px 40px;
+  font-size: 0.95em;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+}
+
+.footer-left img {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-links a {
+  color: white;
+  text-decoration: none;
+  width: 45%;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  color: #ccc;
+  font-size: 0.9em;
+  line-height: 1.5;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.footer-right a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-right a:hover {
+  text-decoration: underline;
+}
+/* Bloques informativos estilo Yale */
+.info-extra {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px 20px;
+  background-image: linear-gradient(135deg, #d82d2d 10%, #ee519e 40%, #ee2626 90%);
+  background-size: cover;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.info-box {
+  flex: 1 1 45%;
+  min-width: 280px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  color: #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+
+.info-box.yellow {
+  background: linear-gradient(to right, #ffffff, #ffe600);
+}
+
+.info-box.gray {
+  background: #f1f1f1;
+}
+
+.info-box a {
+  color: #001f4d;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.info-box a:hover {
+  text-decoration: underline;
+}
+
+.editor-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: #001f4d;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  font-size: 0.8em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.editor-btn:hover {
+  background-color: #003399;
+}
+
+.seccion-informativa {
+    background: linear-gradient(to right, #fffbd5 33.3%, #e0e0e0 33.3%, #e0e0e0 66.6%, #e0e0e0 100%);
+    padding: 40px 20px;
+    color: black;
+}
+
+.titulo-informativo {
+    font-size: 2.2em;
+    font-weight: bold;
+    background: white;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 30px;
+}
+
+.bloques-informativos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bloque {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+.bloque.amarillo {
+    background: linear-gradient(to right, #fffbd5, #f3c623);
+}
+
+.bloque.gris {
+    background-color: #e0e0e0;
+}
+
+
+.editor-btn:hover {
+    background-color: #ddd;
+}
+
+.bloque a {
+    color: #2a2aa5;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.bloque a:hover {
+    text-decoration: underline;
+}

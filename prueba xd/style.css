@@ -1,0 +1,123 @@
+:root {
+  --color-bg: #fef6e4;
+  --color-primary: #f582ae;
+  --color-secondary: #fcd5ce;
+  --color-accent: #8ecae6;
+  --color-dark: #2b2d42;
+  --color-text: #3a3a3a;
+  --font-main: 'Helvetica Neue', sans-serif;
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.support-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.support-header {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  color: white;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+.support-header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 1px;
+}
+
+.support-header p {
+  font-size: 1.2rem;
+  opacity: 0.95;
+}
+
+.support-section {
+  background: var(--color-secondary);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  border-left: 6px solid var(--color-primary);
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+}
+
+.support-section:hover {
+  transform: translateY(-5px);
+}
+
+.support-section h2 {
+  color: var(--color-dark);
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  border-bottom: 2px solid var(--color-accent);
+  display: inline-block;
+  padding-bottom: 0.3rem;
+}
+
+.support-section p {
+  line-height: 1.7;
+  font-size: 1.05rem;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--color-dark);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: var(--color-accent);
+  color: var(--color-dark);
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+  transform: scale(1.05);
+  background-color: #222;
+  color: white;
+}
+
+a {
+  color: var(--color-dark);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--color-primary);
+}
+
+@media (max-width: 600px) {
+  .support-header h1 {
+    font-size: 2rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    text-align: center;
+  }
+}

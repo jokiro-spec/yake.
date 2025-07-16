@@ -1,0 +1,651 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-image: url('fondo.jpg'); /* Cambia esto por el nombre de tu imagen */
+  background-size: cover;       /* Que cubra todo el fondo */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  background-attachment: fixed; /* Fondo fijo al hacer scroll */
+  height: 100vh;                /* O toda la página si quieres */
+  color: white;
+}
+@keyframes sweep {
+   0% {
+  background-position: left center;
+  }
+   100% {
+  background-position: right center;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, red, yellow, blue);
+  color: white;
+  position: static;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right .icon {
+  color: rgb(232, 9, 206);
+  font-size: 1.5rem;
+  margin-left: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Side menu styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #85035e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  color: white;
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid #444;
+  transition: background 0.2s;
+}
+
+.side-menu a:hover {
+  background-color: #555;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #d6f0f0;
+}
+/*body*/
+.people-section {
+  font-family: Arial, sans-serif;
+  color: #000;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 auto;
+
+}
+.title{
+    margin-bottom: 10px;
+}
+.title h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 auto;
+  display: inline-block;
+
+}
+
+.title .highlight {
+  background-color: yellow;
+  color: black;
+  padding: 0 0.2em;
+  display: inline-block;
+  animation: sweep 3s linear infinite;
+}
+/* text */
+.container {
+  display: flex;
+  flex-direction: column; /* apilados verticalmente */
+  justify-content: center;
+  align-items: center;
+  gap: 5px; /* separación vertical entre info-box */
+}
+
+.info-box {
+  background-color: #ddfafa;
+  padding: 10px 10px 20px 10px; /* espacio inferior extra para el botón */ 
+  max-width: 600px;
+  border-radius: 25px;
+  position: relative;
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.info-box a {
+  color: #0033cc;
+  text-decoration: none;
+}
+
+.editor-details {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: white;
+  font-size: 10px;
+  padding: 2px 6px;
+  border-radius: 3px;
+}
+.info-box a:hover {
+  text-decoration: underline;
+}
+/*Subtitle styles */
+.subtitle h2 {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.highlight-subtitle {
+  background-color: yellow;
+  color: black;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.8rem;
+  display: inline-block;
+}
+
+.academic-leadership-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-right: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.academic-leadership-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.academic-leadership-box ul {
+  list-style-type: disc;     /* Viñetas tipo punto */
+  padding-left: 1.5rem;      /* Sangría para que se vean bien */
+  margin: 0;
+}
+
+.academic-leadership-box li {
+  margin-bottom: 0.5rem;
+}
+
+.faculty-governing-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-right: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.faculty-governing-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.faculty-governing-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.faculty-governing-box li {
+  margin-bottom: 0.5rem;
+}
+
+.graphic-design-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-right: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.graphic-design-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.graphic-design-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.graphic-design-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.graphic-design-box li {
+  margin-bottom: 0.4rem;
+}
+
+.painting-printmaking-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.painting-printmaking-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.painting-printmaking-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.painting-printmaking-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.painting-printmaking-box li {
+  margin-bottom: 0.4rem;
+}
+
+.photography-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.photography-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.photography-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.photography-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.photography-box li {
+  margin-bottom: 0.4rem;
+}
+
+.sculpture-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.sculpture-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.sculpture-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.sculpture-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.sculpture-box li {
+  margin-bottom: 0.4rem;
+}
+
+.interdepartmental-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.interdepartmental-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.interdepartmental-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.interdepartmental-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.interdepartmental-box li {
+  margin-bottom: 0.4rem;
+}
+
+.undergraduate-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.undergraduate-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.undergraduate-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.undergraduate-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.undergraduate-box li {
+  margin-bottom: 0.4rem;
+}
+
+.administration-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 900px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.administration-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.administration-box h4 {
+  font-weight: bold;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.administration-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.administration-box li {
+  margin-bottom: 0.4rem;
+}
+
+.norfolk-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 800px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.norfolk-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.norfolk-box h4 {
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.norfolk-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.norfolk-box li {
+  margin-bottom: 0.4rem;
+}
+
+.emeriti-box {
+    background: linear-gradient(
+    135deg,
+    #b2f0c0,   /* verde pastel */
+    #ffc1c1,   /* rojo pastel */
+    #fff5b7,   /* amarillo pastel */
+    #ffd8a8,   /* naranja pastel */
+    #c5d8ff,   /* azul pastel */
+    #e0c3fc    /* morado pastel */
+  );
+  border-top: 4px solid blue;
+  border-left: 4px solid blue;
+  border-radius: 25px;
+  padding: 1rem 1.5rem;
+  margin: 2rem auto;
+  max-width: 600px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.emeriti-box h3 {
+  font-weight: bold;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.emeriti-box ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.emeriti-box li {
+  margin-bottom: 0.4rem;
+}
+
+

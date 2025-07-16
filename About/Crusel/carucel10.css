@@ -1,0 +1,153 @@
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: line-gradient(to right, #85035e, #de176d, #11e6e6);
+  background-size: cover;       /* Que cubra todo el fondo */
+  background-position: center;  /* Centrada */
+  background-repeat: no-repeat; /* Que no se repita */
+  background-attachment: fixed; /* Fondo fijo al hacer scroll */
+  height: 100vh;                /* O toda la página si quieres */
+  color: white;
+}
+@keyframes sweep {
+   0% {
+  background-position: left center;
+  }
+   100% {
+  background-position: right center;
+  }
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+.content-box {
+  background: linear-gradient(to right, #85035e, #de176d, #11e6e6);
+}
+/* Header styles */
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: linear-gradient(to right, red, yellow, blue);
+  color: white;
+  position: static;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header-right .icon {
+  color: rgb(232, 9, 206);
+  font-size: 1.5rem;
+  margin-left: 20px;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* Side menu styles */
+.side-menu {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #85035e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+  transition: right 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.side-menu.open {
+  right: 0;
+}
+
+.side-menu .close-btn {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: none;
+  color: rgb(15, 1, 1);
+  font-size: 2rem;
+  border: none;
+  cursor: pointer;
+}
+
+.side-menu a {
+  padding: 15px 20px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  border-bottom: 1px solid #444;
+  transition: background 0.2s;
+}
+
+.side-menu a:hover {
+  background-color: #555;
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+   background: linear-gradient(to right, #85035e, #de17de, #11e6e6);
+}
+/*contenido*/
+.contact-section {
+  width: 100%;
+  max-width: 600px;     /* ancho máximo de la caja */
+  margin: 40px auto;     /* centrado horizontal y espacio arriba/abajo */
+  padding: 20px;         /* espacio interno */
+  background-color: #94dbed;  /* color de fondo claro */
+  border-radius: 10px;   /* bordes redondeados */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* sombra sutil */
+  text-align: center;
+}
+
+.contact-section h3 {
+  margin: 0;
+  font-size: 1.8em;
+  color: #480505; /* Color del título */
+}
+
+.contact-info {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #dbf1b7;
+  border: 1px solid #480505;
+  border-radius: 8px;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  color: #480505; /* Color del texto */
+}
